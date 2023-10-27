@@ -1,0 +1,1098 @@
+{
+    "__typename": "Tweet",
+    "lang": "en",
+    "favorite_count": 8207,
+    "possibly_sensitive": false,
+    "created_at": "2023-01-24T17:00:02.000Z",
+    "display_text_range": [
+        0,
+        101
+    ],
+    "entities": {
+        "hashtags": [
+            {
+                "indices": [
+                    28,
+                    34
+                ],
+                "text": "HIMYF"
+            }
+        ],
+        "urls": [],
+        "user_mentions": [
+            {
+                "id_str": "15033883",
+                "indices": [
+                    55,
+                    60
+                ],
+                "name": "Hulu",
+                "screen_name": "hulu"
+            }
+        ],
+        "symbols": [],
+        "media": [
+            {
+                "display_url": "pic.twitter.com/AmSXT37obE",
+                "expanded_url": "https://twitter.com/OfficialHIMYM/status/1617930235898462208/photo/1",
+                "indices": [
+                    101,
+                    124
+                ],
+                "url": "https://t.co/AmSXT37obE"
+            }
+        ]
+    },
+    "id_str": "1617930235898462208",
+    "text": "It's happening! Season 2 of #HIMYF is now streaming on @hulu and you might just see a familiar face🤫 https://t.co/AmSXT37obE",
+    "user": {
+        "id_str": "68819587",
+        "name": "HIMYM",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1611438461189296141/xx1lsIOb_normal.png",
+        "screen_name": "OfficialHIMYM",
+        "verified": false,
+        "verified_type": "Business",
+        "is_blue_verified": false,
+        "profile_image_shape": "Square"
+    },
+    "edit_control": {
+        "edit_tweet_ids": [
+            "1617930235898462208"
+        ],
+        "editable_until_msecs": "1674581402000",
+        "is_edit_eligible": true,
+        "edits_remaining": "5"
+    },
+    "mediaDetails": [
+        {
+            "display_url": "pic.twitter.com/AmSXT37obE",
+            "expanded_url": "https://twitter.com/OfficialHIMYM/status/1617930235898462208/photo/1",
+            "ext_media_availability": {
+                "status": "Available"
+            },
+            "indices": [
+                101,
+                124
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FnMlxtOakAEtQrB.jpg",
+            "original_info": {
+                "height": 4096,
+                "width": 2731,
+                "focus_rects": [
+                    {
+                        "x": 0,
+                        "y": 362,
+                        "w": 2731,
+                        "h": 1529
+                    },
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "w": 2731,
+                        "h": 2731
+                    },
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "w": 2731,
+                        "h": 3113
+                    },
+                    {
+                        "x": 102,
+                        "y": 0,
+                        "w": 2048,
+                        "h": 4096
+                    },
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "w": 2731,
+                        "h": 4096
+                    }
+                ]
+            },
+            "sizes": {
+                "large": {
+                    "h": 2048,
+                    "resize": "fit",
+                    "w": 1366
+                },
+                "medium": {
+                    "h": 1200,
+                    "resize": "fit",
+                    "w": 800
+                },
+                "small": {
+                    "h": 680,
+                    "resize": "fit",
+                    "w": 453
+                },
+                "thumb": {
+                    "h": 150,
+                    "resize": "crop",
+                    "w": 150
+                }
+            },
+            "type": "photo",
+            "url": "https://t.co/AmSXT37obE"
+        },
+        {
+            "display_url": "pic.twitter.com/AmSXT37obE",
+            "expanded_url": "https://twitter.com/OfficialHIMYM/status/1617930235898462208/photo/1",
+            "ext_media_availability": {
+                "status": "Available"
+            },
+            "indices": [
+                101,
+                124
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FnMlxtMaMAI_RtJ.jpg",
+            "original_info": {
+                "height": 2912,
+                "width": 4096,
+                "focus_rects": [
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "w": 4096,
+                        "h": 2294
+                    },
+                    {
+                        "x": 280,
+                        "y": 0,
+                        "w": 2912,
+                        "h": 2912
+                    },
+                    {
+                        "x": 459,
+                        "y": 0,
+                        "w": 2554,
+                        "h": 2912
+                    },
+                    {
+                        "x": 1008,
+                        "y": 0,
+                        "w": 1456,
+                        "h": 2912
+                    },
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "w": 4096,
+                        "h": 2912
+                    }
+                ]
+            },
+            "sizes": {
+                "large": {
+                    "h": 1456,
+                    "resize": "fit",
+                    "w": 2048
+                },
+                "medium": {
+                    "h": 853,
+                    "resize": "fit",
+                    "w": 1200
+                },
+                "small": {
+                    "h": 483,
+                    "resize": "fit",
+                    "w": 680
+                },
+                "thumb": {
+                    "h": 150,
+                    "resize": "crop",
+                    "w": 150
+                }
+            },
+            "type": "photo",
+            "url": "https://t.co/AmSXT37obE"
+        }
+    ],
+    "photos": [
+        {
+            "backgroundColor": {
+                "red": 204,
+                "green": 214,
+                "blue": 221
+            },
+            "cropCandidates": [
+                {
+                    "x": 0,
+                    "y": 362,
+                    "w": 2731,
+                    "h": 1529
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 2731,
+                    "h": 2731
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 2731,
+                    "h": 3113
+                },
+                {
+                    "x": 102,
+                    "y": 0,
+                    "w": 2048,
+                    "h": 4096
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 2731,
+                    "h": 4096
+                }
+            ],
+            "expandedUrl": "https://twitter.com/OfficialHIMYM/status/1617930235898462208/photo/1",
+            "url": "https://pbs.twimg.com/media/FnMlxtOakAEtQrB.jpg",
+            "width": 2731,
+            "height": 4096
+        },
+        {
+            "backgroundColor": {
+                "red": 204,
+                "green": 214,
+                "blue": 221
+            },
+            "cropCandidates": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 4096,
+                    "h": 2294
+                },
+                {
+                    "x": 280,
+                    "y": 0,
+                    "w": 2912,
+                    "h": 2912
+                },
+                {
+                    "x": 459,
+                    "y": 0,
+                    "w": 2554,
+                    "h": 2912
+                },
+                {
+                    "x": 1008,
+                    "y": 0,
+                    "w": 1456,
+                    "h": 2912
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 4096,
+                    "h": 2912
+                }
+            ],
+            "expandedUrl": "https://twitter.com/OfficialHIMYM/status/1617930235898462208/photo/1",
+            "url": "https://pbs.twimg.com/media/FnMlxtMaMAI_RtJ.jpg",
+            "width": 4096,
+            "height": 2912
+        }
+    ],
+    "conversation_count": 241,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false,
+    "notes": {
+        "timeline_screen_name": "OfficialHIMYM",
+        "is_retweet": false
+    }
+}
+{
+    "__typename": "Tweet",
+    "lang": "en",
+    "favorite_count": 540,
+    "possibly_sensitive": false,
+    "created_at": "2023-01-25T17:00:31.000Z",
+    "display_text_range": [
+        0,
+        90
+    ],
+    "entities": {
+        "hashtags": [
+            {
+                "indices": [
+                    51,
+                    57
+                ],
+                "text": "HIMYM"
+            }
+        ],
+        "urls": [
+            {
+                "display_url": "hulu.tv/HIMYM",
+                "expanded_url": "http://hulu.tv/HIMYM",
+                "indices": [
+                    67,
+                    90
+                ],
+                "url": "https://t.co/jAeen48FIO"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id_str": "15033883",
+                "indices": [
+                    61,
+                    66
+                ],
+                "name": "Hulu",
+                "screen_name": "hulu"
+            }
+        ],
+        "symbols": [],
+        "media": [
+            {
+                "display_url": "pic.twitter.com/b2O0nDQVjO",
+                "expanded_url": "https://twitter.com/OfficialHIMYM/status/1618292746720010243/video/1",
+                "indices": [
+                    91,
+                    114
+                ],
+                "url": "https://t.co/b2O0nDQVjO"
+            }
+        ]
+    },
+    "id_str": "1618292746720010243",
+    "text": "Challenge accepted - better suit up. Stream all of #HIMYM on @Hulu https://t.co/jAeen48FIO https://t.co/b2O0nDQVjO",
+    "user": {
+        "id_str": "68819587",
+        "name": "HIMYM",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1611438461189296141/xx1lsIOb_normal.png",
+        "screen_name": "OfficialHIMYM",
+        "verified": false,
+        "verified_type": "Business",
+        "is_blue_verified": false,
+        "profile_image_shape": "Square"
+    },
+    "edit_control": {
+        "edit_tweet_ids": [
+            "1618292746720010243"
+        ],
+        "editable_until_msecs": "1674667831000",
+        "is_edit_eligible": true,
+        "edits_remaining": "5"
+    },
+    "mediaDetails": [
+        {
+            "additional_media_info": {
+                "description": "",
+                "embeddable": true,
+                "title": "New Year, New Goals"
+            },
+            "display_url": "pic.twitter.com/b2O0nDQVjO",
+            "expanded_url": "https://twitter.com/OfficialHIMYM/status/1618292746720010243/video/1",
+            "ext_media_availability": {
+                "status": "Available"
+            },
+            "indices": [
+                91,
+                114
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FmyEffnXEAY8QBY.jpg",
+            "original_info": {
+                "height": 1738,
+                "width": 1736,
+                "focus_rects": []
+            },
+            "sizes": {
+                "large": {
+                    "h": 1738,
+                    "resize": "fit",
+                    "w": 1736
+                },
+                "medium": {
+                    "h": 1200,
+                    "resize": "fit",
+                    "w": 1199
+                },
+                "small": {
+                    "h": 680,
+                    "resize": "fit",
+                    "w": 679
+                },
+                "thumb": {
+                    "h": 150,
+                    "resize": "crop",
+                    "w": 150
+                }
+            },
+            "type": "video",
+            "url": "https://t.co/b2O0nDQVjO",
+            "video_info": {
+                "aspect_ratio": [
+                    1,
+                    1
+                ],
+                "duration_millis": 24482,
+                "variants": [
+                    {
+                        "bitrate": 432000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1615811242957934599/vid/320x320/khk3yx0m-hu4qq6D.mp4?tag=16"
+                    },
+                    {
+                        "bitrate": 8768000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1615811242957934599/vid/1080x1080/pquJlZqpNDofgu7C.mp4?tag=16"
+                    },
+                    {
+                        "bitrate": 1280000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1615811242957934599/vid/720x720/7uYD4xaWT3etppVp.mp4?tag=16"
+                    },
+                    {
+                        "bitrate": 832000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1615811242957934599/vid/540x540/lcjiM0v1f6P37Fek.mp4?tag=16"
+                    },
+                    {
+                        "content_type": "application/x-mpegURL",
+                        "url": "https://video.twimg.com/amplify_video/1615811242957934599/pl/pHCNEYh4_HibKZyK.m3u8?tag=16&container=fmp4"
+                    }
+                ]
+            }
+        }
+    ],
+    "photos": [],
+    "video": {
+        "aspectRatio": [
+            1,
+            1
+        ],
+        "contentType": "media_entity",
+        "durationMs": 24482,
+        "mediaAvailability": {
+            "status": "available"
+        },
+        "poster": "https://pbs.twimg.com/media/FmyEffnXEAY8QBY.jpg",
+        "variants": [
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1615811242957934599/vid/320x320/khk3yx0m-hu4qq6D.mp4?tag=16"
+            },
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1615811242957934599/vid/1080x1080/pquJlZqpNDofgu7C.mp4?tag=16"
+            },
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1615811242957934599/vid/720x720/7uYD4xaWT3etppVp.mp4?tag=16"
+            },
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1615811242957934599/vid/540x540/lcjiM0v1f6P37Fek.mp4?tag=16"
+            },
+            {
+                "type": "application/x-mpegURL",
+                "src": "https://video.twimg.com/amplify_video/1615811242957934599/pl/pHCNEYh4_HibKZyK.m3u8?tag=16&container=fmp4"
+            }
+        ],
+        "videoId": {
+            "type": "tweet",
+            "id": "1618292746720010243"
+        },
+        "viewCount": 0
+    },
+    "conversation_count": 4,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false,
+    "notes": {
+        "timeline_screen_name": "OfficialHIMYM",
+        "is_retweet": false
+    }
+}
+{
+    "__typename": "Tweet",
+    "lang": "en",
+    "favorite_count": 765,
+    "possibly_sensitive": false,
+    "created_at": "2023-02-14T17:00:01.000Z",
+    "display_text_range": [
+        0,
+        93
+    ],
+    "entities": {
+        "hashtags": [
+            {
+                "indices": [
+                    54,
+                    60
+                ],
+                "text": "HIMYM"
+            }
+        ],
+        "urls": [
+            {
+                "display_url": "hulu.tv/HIMYM",
+                "expanded_url": "http://hulu.tv/HIMYM",
+                "indices": [
+                    70,
+                    93
+                ],
+                "url": "https://t.co/jAeen49dym"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id_str": "15033883",
+                "indices": [
+                    64,
+                    69
+                ],
+                "name": "Hulu",
+                "screen_name": "hulu"
+            }
+        ],
+        "symbols": [],
+        "media": [
+            {
+                "display_url": "pic.twitter.com/GH4aUK5V1K",
+                "expanded_url": "https://twitter.com/OfficialHIMYM/status/1625540375850139648/video/1",
+                "indices": [
+                    94,
+                    117
+                ],
+                "url": "https://t.co/GH4aUK5V1K"
+            }
+        ]
+    },
+    "id_str": "1625540375850139648",
+    "text": "Here's to one of our FAVORITE classic couples! Stream #HIMYM on @Hulu https://t.co/jAeen49dym https://t.co/GH4aUK5V1K",
+    "user": {
+        "id_str": "68819587",
+        "name": "HIMYM",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1611438461189296141/xx1lsIOb_normal.png",
+        "screen_name": "OfficialHIMYM",
+        "verified": false,
+        "verified_type": "Business",
+        "is_blue_verified": false,
+        "profile_image_shape": "Square"
+    },
+    "edit_control": {
+        "edit_tweet_ids": [
+            "1625540375850139648"
+        ],
+        "editable_until_msecs": "1676395801000",
+        "is_edit_eligible": true,
+        "edits_remaining": "5"
+    },
+    "mediaDetails": [
+        {
+            "additional_media_info": {
+                "description": "",
+                "embeddable": true,
+                "title": ""
+            },
+            "display_url": "pic.twitter.com/GH4aUK5V1K",
+            "expanded_url": "https://twitter.com/OfficialHIMYM/status/1625540375850139648/video/1",
+            "ext_media_availability": {
+                "status": "Available"
+            },
+            "indices": [
+                94,
+                117
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FnWfVEsXgAAuDRc.jpg",
+            "original_info": {
+                "height": 1568,
+                "width": 1578,
+                "focus_rects": []
+            },
+            "sizes": {
+                "large": {
+                    "h": 1568,
+                    "resize": "fit",
+                    "w": 1578
+                },
+                "medium": {
+                    "h": 1192,
+                    "resize": "fit",
+                    "w": 1200
+                },
+                "small": {
+                    "h": 676,
+                    "resize": "fit",
+                    "w": 680
+                },
+                "thumb": {
+                    "h": 150,
+                    "resize": "crop",
+                    "w": 150
+                }
+            },
+            "type": "video",
+            "url": "https://t.co/GH4aUK5V1K",
+            "video_info": {
+                "aspect_ratio": [
+                    1,
+                    1
+                ],
+                "duration_millis": 65398,
+                "variants": [
+                    {
+                        "bitrate": 432000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1618373986412367872/vid/320x320/dPA1YGhhwU8pwEjY.mp4?tag=16"
+                    },
+                    {
+                        "bitrate": 8768000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1618373986412367872/vid/1080x1080/2KWgwNiBUSxYPgLA.mp4?tag=16"
+                    },
+                    {
+                        "bitrate": 832000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1618373986412367872/vid/540x540/jdXu1FxGIA4Aa_kc.mp4?tag=16"
+                    },
+                    {
+                        "content_type": "application/x-mpegURL",
+                        "url": "https://video.twimg.com/amplify_video/1618373986412367872/pl/Ae8UQkP0I3T63SXt.m3u8?tag=16&container=fmp4"
+                    },
+                    {
+                        "bitrate": 1280000,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/amplify_video/1618373986412367872/vid/720x720/Dk8hSNWLlVNfPY_X.mp4?tag=16"
+                    }
+                ]
+            }
+        }
+    ],
+    "photos": [],
+    "video": {
+        "aspectRatio": [
+            1,
+            1
+        ],
+        "contentType": "media_entity",
+        "durationMs": 65398,
+        "mediaAvailability": {
+            "status": "available"
+        },
+        "poster": "https://pbs.twimg.com/media/FnWfVEsXgAAuDRc.jpg",
+        "variants": [
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1618373986412367872/vid/320x320/dPA1YGhhwU8pwEjY.mp4?tag=16"
+            },
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1618373986412367872/vid/1080x1080/2KWgwNiBUSxYPgLA.mp4?tag=16"
+            },
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1618373986412367872/vid/540x540/jdXu1FxGIA4Aa_kc.mp4?tag=16"
+            },
+            {
+                "type": "application/x-mpegURL",
+                "src": "https://video.twimg.com/amplify_video/1618373986412367872/pl/Ae8UQkP0I3T63SXt.m3u8?tag=16&container=fmp4"
+            },
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/amplify_video/1618373986412367872/vid/720x720/Dk8hSNWLlVNfPY_X.mp4?tag=16"
+            }
+        ],
+        "videoId": {
+            "type": "tweet",
+            "id": "1625540375850139648"
+        },
+        "viewCount": 0
+    },
+    "conversation_count": 6,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false,
+    "notes": {
+        "timeline_screen_name": "OfficialHIMYM",
+        "is_retweet": false
+    }
+}
+{
+    "__typename": "Tweet",
+    "lang": "en",
+    "favorite_count": 1775,
+    "possibly_sensitive": false,
+    "created_at": "2023-06-18T15:00:03.000Z",
+    "display_text_range": [
+        0,
+        109
+    ],
+    "entities": {
+        "hashtags": [
+            {
+                "indices": [
+                    45,
+                    56
+                ],
+                "text": "FathersDay"
+            },
+            {
+                "indices": [
+                    69,
+                    75
+                ],
+                "text": "HIMYM"
+            }
+        ],
+        "urls": [
+            {
+                "display_url": "hulu.tv/HIMYM",
+                "expanded_url": "http://hulu.tv/HIMYM",
+                "indices": [
+                    86,
+                    109
+                ],
+                "url": "https://t.co/jAeen49dym"
+            }
+        ],
+        "user_mentions": [
+            {
+                "id_str": "15033883",
+                "indices": [
+                    79,
+                    84
+                ],
+                "name": "Hulu",
+                "screen_name": "hulu"
+            }
+        ],
+        "symbols": [],
+        "media": [
+            {
+                "display_url": "pic.twitter.com/XA6qV15Wsj",
+                "expanded_url": "https://twitter.com/OfficialHIMYM/status/1670446279741308928/photo/1",
+                "indices": [
+                    110,
+                    133
+                ],
+                "url": "https://t.co/XA6qV15Wsj"
+            }
+        ]
+    },
+    "id_str": "1670446279741308928",
+    "text": "Get some quality time in with your favs this #FathersDay by steaming #HIMYM on @Hulu. https://t.co/jAeen49dym https://t.co/XA6qV15Wsj",
+    "user": {
+        "id_str": "68819587",
+        "name": "HIMYM",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1611438461189296141/xx1lsIOb_normal.png",
+        "screen_name": "OfficialHIMYM",
+        "verified": false,
+        "verified_type": "Business",
+        "is_blue_verified": false,
+        "profile_image_shape": "Square"
+    },
+    "edit_control": {
+        "edit_tweet_ids": [
+            "1670446279741308928"
+        ],
+        "editable_until_msecs": "1687104003000",
+        "is_edit_eligible": true,
+        "edits_remaining": "5"
+    },
+    "mediaDetails": [
+        {
+            "display_url": "pic.twitter.com/XA6qV15Wsj",
+            "expanded_url": "https://twitter.com/OfficialHIMYM/status/1670446279741308928/photo/1",
+            "ext_media_availability": {
+                "status": "Available"
+            },
+            "indices": [
+                110,
+                133
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FwXBh4uagAEFFSg.jpg",
+            "original_info": {
+                "height": 1080,
+                "width": 1080,
+                "focus_rects": [
+                    {
+                        "x": 0,
+                        "y": 157,
+                        "w": 1080,
+                        "h": 605
+                    },
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "w": 1080,
+                        "h": 1080
+                    },
+                    {
+                        "x": 133,
+                        "y": 0,
+                        "w": 947,
+                        "h": 1080
+                    },
+                    {
+                        "x": 540,
+                        "y": 0,
+                        "w": 540,
+                        "h": 1080
+                    },
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "w": 1080,
+                        "h": 1080
+                    }
+                ]
+            },
+            "sizes": {
+                "large": {
+                    "h": 1080,
+                    "resize": "fit",
+                    "w": 1080
+                },
+                "medium": {
+                    "h": 1080,
+                    "resize": "fit",
+                    "w": 1080
+                },
+                "small": {
+                    "h": 680,
+                    "resize": "fit",
+                    "w": 680
+                },
+                "thumb": {
+                    "h": 150,
+                    "resize": "crop",
+                    "w": 150
+                }
+            },
+            "type": "photo",
+            "url": "https://t.co/XA6qV15Wsj"
+        }
+    ],
+    "photos": [
+        {
+            "backgroundColor": {
+                "red": 204,
+                "green": 214,
+                "blue": 221
+            },
+            "cropCandidates": [
+                {
+                    "x": 0,
+                    "y": 157,
+                    "w": 1080,
+                    "h": 605
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 1080,
+                    "h": 1080
+                },
+                {
+                    "x": 133,
+                    "y": 0,
+                    "w": 947,
+                    "h": 1080
+                },
+                {
+                    "x": 540,
+                    "y": 0,
+                    "w": 540,
+                    "h": 1080
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "w": 1080,
+                    "h": 1080
+                }
+            ],
+            "expandedUrl": "https://twitter.com/OfficialHIMYM/status/1670446279741308928/photo/1",
+            "url": "https://pbs.twimg.com/media/FwXBh4uagAEFFSg.jpg",
+            "width": 1080,
+            "height": 1080
+        }
+    ],
+    "conversation_count": 15,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false,
+    "notes": {
+        "timeline_screen_name": "OfficialHIMYM",
+        "is_retweet": false
+    }
+}
+{
+    "__typename": "Tweet",
+    "lang": "en",
+    "favorite_count": 237,
+    "possibly_sensitive": false,
+    "created_at": "2023-07-16T16:00:01.000Z",
+    "display_text_range": [
+        0,
+        173
+    ],
+    "entities": {
+        "hashtags": [
+            {
+                "indices": [
+                    0,
+                    20
+                ],
+                "text": "CelebrityFamilyFeud"
+            },
+            {
+                "indices": [
+                    94,
+                    109
+                ],
+                "text": "DragMeToDinner"
+            }
+        ],
+        "urls": [],
+        "user_mentions": [
+            {
+                "id_str": "90420314",
+                "indices": [
+                    73,
+                    85
+                ],
+                "name": "Neil Patrick Harris",
+                "screen_name": "ActuallyNPH"
+            },
+            {
+                "id_str": "3112227351",
+                "indices": [
+                    158,
+                    172
+                ],
+                "name": "Celeb Family Feud",
+                "screen_name": "FamilyFeudABC"
+            }
+        ],
+        "symbols": [],
+        "media": [
+            {
+                "display_url": "pic.twitter.com/e3ApERrSd4",
+                "expanded_url": "https://twitter.com/OfficialHIMYM/status/1680608233956712450/photo/1",
+                "indices": [
+                    173,
+                    196
+                ],
+                "url": "https://t.co/e3ApERrSd4"
+            }
+        ]
+    },
+    "id_str": "1680608233956712450",
+    "text": "#CelebrityFamilyFeud is going to be LE-GEN-wait for it-DARY 🤩 Don’t miss @ActuallyNPH and the #DragMeToDinner cast TONIGHT at 9/8c on ABC and Stream on Hulu! @FamilyFeudABC https://t.co/e3ApERrSd4",
+    "user": {
+        "id_str": "68819587",
+        "name": "HIMYM",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1611438461189296141/xx1lsIOb_normal.png",
+        "screen_name": "OfficialHIMYM",
+        "verified": false,
+        "verified_type": "Business",
+        "is_blue_verified": false,
+        "profile_image_shape": "Square"
+    },
+    "edit_control": {
+        "edit_tweet_ids": [
+            "1680608233956712450"
+        ],
+        "editable_until_msecs": "1689526801000",
+        "is_edit_eligible": true,
+        "edits_remaining": "5"
+    },
+    "mediaDetails": [
+        {
+            "display_url": "pic.twitter.com/e3ApERrSd4",
+            "expanded_url": "https://twitter.com/OfficialHIMYM/status/1680608233956712450/photo/1",
+            "ext_media_availability": {
+                "status": "Available"
+            },
+            "indices": [
+                173,
+                196
+            ],
+            "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/F04CEqwaMAECeH1.jpg",
+            "original_info": {
+                "height": 600,
+                "width": 600,
+                "focus_rects": []
+            },
+            "sizes": {
+                "large": {
+                    "h": 600,
+                    "resize": "fit",
+                    "w": 600
+                },
+                "medium": {
+                    "h": 600,
+                    "resize": "fit",
+                    "w": 600
+                },
+                "small": {
+                    "h": 600,
+                    "resize": "fit",
+                    "w": 600
+                },
+                "thumb": {
+                    "h": 150,
+                    "resize": "crop",
+                    "w": 150
+                }
+            },
+            "type": "animated_gif",
+            "url": "https://t.co/e3ApERrSd4",
+            "video_info": {
+                "aspect_ratio": [
+                    1,
+                    1
+                ],
+                "variants": [
+                    {
+                        "bitrate": 0,
+                        "content_type": "video/mp4",
+                        "url": "https://video.twimg.com/tweet_video/F04CEqwaMAECeH1.mp4"
+                    }
+                ]
+            }
+        }
+    ],
+    "photos": [],
+    "video": {
+        "aspectRatio": [
+            1,
+            1
+        ],
+        "contentType": "gif",
+        "durationMs": 0,
+        "mediaAvailability": {
+            "status": "available"
+        },
+        "poster": "https://pbs.twimg.com/tweet_video_thumb/F04CEqwaMAECeH1.jpg",
+        "variants": [
+            {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/tweet_video/F04CEqwaMAECeH1.mp4"
+            }
+        ],
+        "videoId": {
+            "type": "tweet",
+            "id": "1680608233956712450"
+        },
+        "viewCount": 0
+    },
+    "conversation_count": 2,
+    "news_action_type": "conversation",
+    "isEdited": false,
+    "isStaleEdit": false,
+    "notes": {
+        "timeline_screen_name": "OfficialHIMYM",
+        "is_retweet": false
+    }
+}
