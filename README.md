@@ -11,7 +11,9 @@ Below are the various steps in the project. More may be added as it progresses.
 * Used Twitter scraping code to retreive tweets and comments from the official [@ModernFam](https://twitter.com/ModernFam) Twitter page. 
 * These comments were saved to json files which I combined into one. After removing duplicates, these are saved in the data folder. 
 * [This](data/twitter_comments.json) json file contains user, timestamp and text of the comment/tweet. 
-* There are approximate 1200 comments in this file, and these form the basis of the project.
+* There are approximate 1300 comments in this file, and these form the basis of the project.
+
+* NB: Tweets and comments can be collected using the Twitter Developer API, or by using Twitter scraping code. I used pre-existing code but user may use to write code themselves.
 
 ### 2. Data Preprocessing (In progress):
 * Remove unnecessary data, including retweets and duplicates.
