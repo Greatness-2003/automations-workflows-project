@@ -23,10 +23,13 @@ Below are the various steps in the project. More may be added as it progresses.
 
 ### 3. Sentiment Analysis (in progress):
 
-* Implement a sentiment analysis algorithm to classify tweets into three categories: positive, negative, or neutral.
-* Utilize natural language processing (NLP) libraries like NLTK for text analysis.
-* Train a machine learning model (e.g., Naive Bayes, LSTM, or BERT) to perform sentiment classification.
-* Evaluate the model's performance using metrics such as accuracy, precision, recall, and F1 score.
+I used two approaches:
+* Rule-Based Approaches: Used pre-built sentiment analysis library, TextBlob to perform sentiment analysis.
+* Machine Learning Approaches: Trained own sentiment analysis model (Naive Bayes) using labeled data.
+* Implemented a sentiment analysis algorithm to classify tweets into three categories: positive, negative, or neutral.
+* Evaluated the model's performance using metrics such as accuracy, precision, recall, and F1 score.
+* Found that TextBlob gave better performance metrics, so went with that.
+
 
 ### 4. Data Visualization:
 
