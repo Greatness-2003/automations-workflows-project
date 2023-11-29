@@ -31,7 +31,7 @@ Below are the various steps in the project. More may be added as it progresses.
 * Evaluated the model's performance using metrics such as accuracy, precision, recall, and F1 score.
 * TextBlob and the trained naive bayes model are then run on the unlabeled comments to predict sentiments. 
 
-***NB: The random seed is set so that the same comments (whose labels are already stored) are retreived for training every time the class is run. If the user changes this value, or the number of comments to subset is changed, then they would have to do the manual labeling themselves. ***
+***NB: The random seed is set so that the same comments (whose labels are already stored) are retreived for training every time the class is run. If the user changes this value, or the number of comments to subset is changed, then they would have to do the manual labeling themselves.***
 
 
 * The prediction function `predict_unlabeled_data` returns various statistics, such as percentages for negative, neutral and positive comments. For the data, the output for TextBlob method is below:

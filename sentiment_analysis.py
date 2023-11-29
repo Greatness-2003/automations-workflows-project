@@ -141,7 +141,7 @@ class SentimentAnalysis:
 
         # print a corresponding statement based on the highest sentiment
         if highest_sentiment == 'Positive':
-            print("Yay, most people have a positive sentiment!")
+            print("Yay, most people love this show!")
         elif highest_sentiment == 'Neutral':
             print("Seems most people are on the fence about the show.")
         elif highest_sentiment == 'Negative':
