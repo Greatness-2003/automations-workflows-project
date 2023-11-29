@@ -2,7 +2,7 @@
 
 Project Description: In this project, I will develop a sentiment analysis tool to analyze Twitter data related to the popular TV show, Modern Family. The goal is to collect, process, and analyze tweets, comments, and posts from Twitter to determine the sentiment (positive, negative, or neutral) of the audience's reactions to the show. This project aims to provide valuable insights into how people perceive and engage with TV shows on social media platforms.
 
-NB: For this project, I am only focusing on 1 TV show, but the process can be extended to others in the future.
+***NB: For this project, I am only focusing on 1 TV show, but the process can be extended to others in the future.***
 
 Below are the various steps in the project. More may be added as it progresses.
 ## Project Components:
@@ -23,7 +23,7 @@ Below are the various steps in the project. More may be added as it progresses.
 * This [preprocessing python class](preprocessing.py) found in `preprocessing.py` does all the above. 
 * Running the class on `twiiter_comments` returns a [list](data/preprocessed_tweets.json) of tokenized and preprocessed tweets.
 
-### 3. Sentiment Analysis (in progress):
+### 3. Sentiment Analysis (completed):
 
 * The class that performs sentiment analysis on `preprocessed_tweets.json` is called `SentimentAnalysis` and can be found [here](sentiment_analysis.py). 
 * This class takes 2 approaches: TextBlob (rule-based approach) and Naive Bayes (machine learning approach). The user can choose which of the approaches they want to use when running the class.
@@ -45,10 +45,14 @@ Negative: 55
 Positive Percentage: 51.99430199430199
 Neutral Percentage: 40.17094017094017
 Negative Percentage: 7.834757834757834
-Yay, most people have a positive sentiment!
+Yay, most people love this show!
 ```
 
-### 4. Data Visualization:
+### 4. Data Visualization (in progress):
 
-Create visualizations, such as word clouds, bar charts, and line graphs, to represent sentiment trends over time.
-Display the distribution of positive, negative, and neutral tweets for different TV shows.
+* Wrote a Class that create several visualizations. 
+* First function creates a bar chart to show the distribution of sentiments in the unlabeled dataset. This helps visualize the balance or imbalance between positive, neutral, and negative sentiments.
+* Next function creates a stacked bar chart to compare the distribution of sentiments predicted by different methods ( Naive Bayes vs. TextBlob). This can help identify patterns and differences between the methods.
+* Last function generate word clouds for each sentiment category to highlight the most frequent words associated with positive, neutral, and negative sentiments. This can offer insights into the key terms driving sentiment.
+
+***NB: If using functions separately, then Function to create wordclouds should be run in Google Colab. Kept getting `ValueError: Only supported for TrueType fonts` when using Jupyter Notebook and Colab was the only solution that worked.***

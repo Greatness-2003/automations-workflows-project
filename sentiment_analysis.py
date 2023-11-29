@@ -58,6 +58,10 @@ class SentimentAnalysis:
         self.clf = MultinomialNB()
         self.clf.fit(X_train_tfidf, self.y_train)
 
+    def analyze_sentiment_naive_bayes(self, comment):
+        # use the trained Naive Bayes classifier to predict sentiment for specific comment
+        return self.clf.predict(self.tfidf_vectorizer.transform([comment]))[0]
+    
     def analyze_sentiment_textblob(self, comment):
         # analyze sentiment using TextBlob
         analysis = TextBlob(comment)
@@ -124,11 +128,6 @@ class SentimentAnalysis:
             'Neutral Percentage': (predictions.count(1) / len(predictions)) * 100,
             'Negative Percentage': (predictions.count(0) / len(predictions)) * 100
         }
-
-        # print or return the statistics for the specified method
-        print(f"{method} Statistics:")
-        for key, value in method_stats.items():
-            print(f"{key}: {value}")
 
         # determine the sentiment with the highest percentage
         sentiment_percentages = {
