@@ -106,7 +106,7 @@ class SentimentAnalysis:
         # use Naive Bayes on unlabeled data
         if method == 'naive_bayes':
             X_unlabeled_tfidf = self.tfidf_vectorizer.transform(self.unlabeled_tweets)
-            predictions = self.clf.predict(X_unlabeled_tfidf)
+            predictions = list(self.clf.predict(X_unlabeled_tfidf))
 
         # use TextBlob on unlabeled data
         elif method == 'textblob':
@@ -143,9 +143,9 @@ class SentimentAnalysis:
         if highest_sentiment == 'Positive':
             print("Yay, most people have a positive sentiment!")
         elif highest_sentiment == 'Neutral':
-            print("Most people have a neutral sentiment.")
+            print("Seems most people are on the fence about the show.")
         elif highest_sentiment == 'Negative':
-            print("Oh no, most people have a negative sentiment.")
+            print("Oh no, most people hate this show.")
 
 
         return method_stats
