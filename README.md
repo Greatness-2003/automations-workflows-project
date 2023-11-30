@@ -50,7 +50,7 @@ Yay, most people love this show!
 
 ### 4. Data Visualization (in progress):
 
-* Wrote a Class that create several visualizations. 
+* Wrote a Class that create several visualizations, called `SentimentVisualizer` located in this [file](analysis_plots.py). This class takes the `SentimentAnalysis` class as a parameter and uses some of its functions.
 * First function creates a bar chart to show the distribution of sentiments in the unlabeled dataset. This helps visualize the balance or imbalance between positive, neutral, and negative sentiments.
 * Next function creates a stacked bar chart to compare the distribution of sentiments predicted by different methods ( Naive Bayes vs. TextBlob). This can help identify patterns and differences between the methods.
 * Last function generate word clouds for each sentiment category to highlight the most frequent words associated with positive, neutral, and negative sentiments. This can offer insights into the key terms driving sentiment.
