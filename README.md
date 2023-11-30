@@ -55,4 +55,3 @@ Yay, most people love this show!
 * Next function creates a stacked bar chart to compare the distribution of sentiments predicted by different methods ( Naive Bayes vs. TextBlob). This can help identify patterns and differences between the methods.
 * Last function generate word clouds for each sentiment category to highlight the most frequent words associated with positive, neutral, and negative sentiments. This can offer insights into the key terms driving sentiment.
 
-***NB: If using functions separately, then Function to create wordclouds should be run in Google Colab. Kept getting `ValueError: Only supported for TrueType fonts` when using Jupyter Notebook and Colab was the only solution that worked.***
