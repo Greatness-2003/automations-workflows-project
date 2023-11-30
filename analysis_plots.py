@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-import SentimentAnalysis
+from sentiment_analysis import SentimentAnalysis
 
 from wordcloud import WordCloud
 
