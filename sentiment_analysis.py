@@ -29,7 +29,12 @@ class SentimentAnalysis:
         labeled_content = [tweet for tweet in self.sampled_tweets]
         
         # create a dataset of unlabeled tweets for use later
-        self.unlabeled_tweets = [tweet if tweet not in labeled_content else labeled_content.remove(tweet) for tweet in self.preprocessed_tweets]
+        self.unlabeled_tweets = []
+        for tweet in self.preprocessed_tweets:
+            if tweet in labeled_content:
+                labeled_content.remove(tweet)
+            else:
+                self.unlabeled_tweets.append(tweet)
 
         with open(labels_file, 'r', encoding='utf-8') as file:
             sentiment_labels = json.load(file)
