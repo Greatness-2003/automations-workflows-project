@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sentiment_analysis import SentimentAnalysis
-
 from wordcloud import WordCloud
+
+from sentiment_analysis import SentimentAnalysis
 
 
 class SentimentVisualizer:
@@ -89,12 +89,14 @@ class SentimentVisualizer:
 # Example usage:
 sentiment_analysis = SentimentAnalysis()
 visualizer = SentimentVisualizer(sentiment_analysis)
-
-stats = sentiment_analysis.predict_unlabeled_data(method='naive_bayes')
-visualizer.sentiment_distribution_bar(stats, method='naive_bayes')
+sentiment_analysis.train_classifier(method='naive_bayes')
 
 method_stats_naive_bayes = sentiment_analysis.predict_unlabeled_data(method='naive_bayes')
+visualizer.sentiment_distribution_bar(method_stats_naive_bayes, method='naive_bayes')
+
 method_stats_textblob = sentiment_analysis.predict_unlabeled_data(method='textblob')
+visualizer.sentiment_distribution_bar(method_stats_textblob, method='textblob')
+
 
 method_stats_list = [
     {'Method': 'Naive Bayes', **method_stats_naive_bayes},

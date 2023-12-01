@@ -134,6 +134,11 @@ class SentimentAnalysis:
             'Negative Percentage': (predictions.count(0) / len(predictions)) * 100
         }
 
+        # print or return the statistics for the specified method
+        print(f"{method} statistics:")
+        for key, value in method_stats.items():
+            print(f"{key}: {value}")
+
         # determine the sentiment with the highest percentage
         sentiment_percentages = {
             'Positive': method_stats['Positive Percentage'],
@@ -158,9 +163,9 @@ class SentimentAnalysis:
 # Example usage
 sentiment_analysis = SentimentAnalysis()
 sentiment_analysis.train_classifier(method='naive_bayes')
-sentiment_analysis.evaluate(method='naive_bayes')
+# sentiment_analysis.evaluate(method='naive_bayes')
 sentiment_analysis.predict_unlabeled_data(method='naive_bayes')
 
 sentiment_analysis.train_classifier(method='textblob')
-sentiment_analysis.evaluate(method='textblob')
+# sentiment_analysis.evaluate(method='textblob')
 sentiment_analysis.predict_unlabeled_data(method='textblob')
