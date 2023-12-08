@@ -1,7 +1,7 @@
 import json
 import random
 import pandas as pd
-
+from os.path import exists
 from textblob import TextBlob
 
 from sklearn.naive_bayes import MultinomialNB
@@ -30,11 +30,15 @@ class SentimentAnalysis:
         
         # create a dataset of unlabeled tweets for use later
         self.unlabeled_tweets = []
-        for tweet in self.preprocessed_tweets:
-            if tweet in labeled_content:
-                labeled_content.remove(tweet)
-            else:
-                self.unlabeled_tweets.append(tweet)
+        if not exists ("data/unlabeled_comments.json"):
+            for tweet in self.preprocessed_tweets:
+                if tweet in labeled_content:
+                    labeled_content.remove(tweet)
+                else:
+                    self.unlabeled_tweets.append(tweet)
+        else:
+            with open('unlabeled_comments.json', 'r') as file:
+                self.unlabeled_tweets = json.load(file)
 
         with open(labels_file, 'r', encoding='utf-8') as file:
             sentiment_labels = json.load(file)

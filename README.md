@@ -12,6 +12,7 @@ Below are the various steps in the project. More may be added as it progresses.
 * These comments were saved to json files which I combined into one. After removing duplicates, these are saved in the data folder. 
 * The json [file](data/twitter_comments.json) which contains user, timestamp and text of the comment/tweet is called `twiiter_comments`. 
 * There are approximately 1300 comments in this file, and these form the basis of the project.
+* These comments were collected mainly for training and testing purposes. The user would have to should collect their data themselves to run the program on.
 
 
 ***NB: Tweets and comments can be collected using the Twitter Developer API, or by using Twitter scraping code. I used [pre-existing code](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/week-3/twitter-scraper/scrape_twitter.py) developed by Professor Alexander Nwala, Data Science professor at William and Mary.***
@@ -21,7 +22,8 @@ Below are the various steps in the project. More may be added as it progresses.
 * Cleaned the text data by handling special characters, and URLs.
 * Tokenized the text data to prepare it for sentiment analysis.
 * This [preprocessing python class](preprocessing.py) found in `preprocessing.py` does all the above. 
-* Running the class on `twiiter_comments` returns a [list](data/preprocessed_tweets.json) of tokenized and preprocessed tweets.
+* Running the class on `twiiter_comments` returns a [json file](data/preprocessed_tweets.json) of tokenized and preprocessed tweets.
+* The user should run the class on their collected comments and save the output as `unlabeled_comments.json` in the `data` folder. This is necessary to run the sentiment analysis.
 
 ### 3. Sentiment Analysis (completed):
 
@@ -30,6 +32,8 @@ Below are the various steps in the project. More may be added as it progresses.
 * In order to train the naives bayes model, a random subset (600) of the comments were selected and manually labeled as positive, negative, or neutral. These labels are stored in another json [file](data/sentiment_labels.json) called `sentiment_labels`. 
 * Evaluated the model's performance using metrics such as accuracy, precision, recall, and F1 score.
 * TextBlob and the trained naive bayes model are then run on the unlabeled comments to predict sentiments. 
+* If the user's preprocessed comments (`unlabeled_comments.json`) do not exist, then the program would run prediction on the remaining 700 comments that weren't labeled.
+
 
 ***NB: The random seed is set so that the same comments (whose labels are already stored) are retreived for training every time the class is run. If the user changes this value, or the number of comments to subset is changed, then they would have to do the manual labeling themselves.***
 
@@ -48,7 +52,7 @@ Negative Percentage: 7.834757834757834
 Yay, most people love this show!
 ```
 
-### 4. Data Visualization (in progress):
+### 4. Data Visualization (completed):
 
 * Wrote a Class that create several visualizations, called `SentimentVisualizer` located in this [file](analysis_plots.py). This class takes the `SentimentAnalysis` class as a parameter and uses some of its functions.
 * First function creates a bar chart to show the distribution of sentiments in the unlabeled dataset. This helps visualize the balance or imbalance between positive, neutral, and negative sentiments.
