@@ -25,10 +25,20 @@ Below are the various steps in the project. More may be added as it progresses.
 * Running the class on `twiiter_comments` returns a [json file](data/preprocessed_tweets.json) of tokenized and preprocessed tweets.
 * The user should run the class on their collected comments and save the output as `unlabeled_comments.json` in the `data` folder. This is necessary to run the sentiment analysis.
 
+Example terminal run:
+
+```bash
+python preprocessing.py data/input_data.json data/output_data.json
+```
 ### 3. Sentiment Analysis (completed):
 
 * The class that performs sentiment analysis on `preprocessed_tweets.json` is called `SentimentAnalysis` and can be found [here](sentiment_analysis.py). 
-* This class takes 2 approaches: TextBlob (rule-based approach) and Naive Bayes (machine learning approach). The user can choose which of the approaches they want to use when running the class.
+* This class takes 2 approaches: TextBlob (rule-based approach) and Naive Bayes (machine learning approach). The user can choose which of the approaches they want to use when running the script. The default method is `naive_bayes`, and will be implemented if the user does not give an argument.
+
+```bash
+python sentiment_analysis.py --method textblob
+```
+
 * In order to train the naives bayes model, a random subset (600) of the comments were selected and manually labeled as positive, negative, or neutral. These labels are stored in another json [file](data/sentiment_labels.json) called `sentiment_labels`. 
 * Evaluated the model's performance using metrics such as accuracy, precision, recall, and F1 score.
 * TextBlob and the trained naive bayes model are then run on the unlabeled comments to predict sentiments. 
@@ -59,3 +69,10 @@ Yay, most people love this show!
 * Next function creates a stacked bar chart to compare the distribution of sentiments predicted by different methods ( Naive Bayes vs. TextBlob). This can help identify patterns and differences between the methods.
 * Last function generate word clouds for each sentiment category to highlight the most frequent words associated with positive, neutral, and negative sentiments. This can offer insights into the key terms driving sentiment.
 
+Example terminal run:
+
+```bash
+python analysis_plots.py --method textblob
+```
+
+* Just like the previous, the default method is `naive_bayes`.

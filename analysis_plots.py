@@ -1,3 +1,4 @@
+import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -86,22 +87,30 @@ class SentimentVisualizer:
             else:
                 print(f"No comments for {sentiment} sentiment.")
 
-# Example usage:
-sentiment_analysis = SentimentAnalysis()
-visualizer = SentimentVisualizer(sentiment_analysis)
-sentiment_analysis.train_classifier(method='naive_bayes')
+def main():
+    parser = argparse.ArgumentParser(description='Sentiment Visualizer Script')
+    parser.add_argument('--method', choices=['naive_bayes', 'textblob'], default='naive_bayes',
+                        help='Method for sentiment analysis (naive_bayes or textblob)')
 
-method_stats_naive_bayes = sentiment_analysis.predict_unlabeled_data(method='naive_bayes')
-visualizer.sentiment_distribution_bar(method_stats_naive_bayes, method='naive_bayes')
+    args = parser.parse_args()
 
-method_stats_textblob = sentiment_analysis.predict_unlabeled_data(method='textblob')
-visualizer.sentiment_distribution_bar(method_stats_textblob, method='textblob')
+    sentiment_analysis = SentimentAnalysis()
+    visualizer = SentimentVisualizer(sentiment_analysis, method=args.method)
+    sentiment_analysis.train_classifier(method=args.method)
 
+    method_stats = sentiment_analysis.predict_unlabeled_data(method=args.method)
+    visualizer.sentiment_distribution_bar(method_stats)
 
-method_stats_list = [
-    {'Method': 'Naive Bayes', **method_stats_naive_bayes},
-    {'Method': 'TextBlob', **method_stats_textblob}
-]
+    method_stats_textblob = sentiment_analysis.predict_unlabeled_data(method='textblob')
+    visualizer.sentiment_distribution_bar(method_stats_textblob)
 
-visualizer.sentiment_distribution_stackedbar(method_stats_list)
-visualizer.generate_word_cloud(method='textblob')
+    method_stats_list = [
+        {'Method': 'Naive Bayes', **method_stats},
+        {'Method': 'TextBlob', **method_stats_textblob}
+    ]
+
+    visualizer.sentiment_distribution_stackedbar(method_stats_list)
+    visualizer.generate_word_cloud()
+
+if __name__ == "__main__":
+    main()

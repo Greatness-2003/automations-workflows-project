@@ -1,5 +1,6 @@
 import json
 import random
+import argparse
 import pandas as pd
 from os.path import exists
 from textblob import TextBlob
@@ -164,12 +165,23 @@ class SentimentAnalysis:
         return method_stats
 
 
-# Example usage
-sentiment_analysis = SentimentAnalysis()
-sentiment_analysis.train_classifier(method='naive_bayes')
-# sentiment_analysis.evaluate(method='naive_bayes')
-sentiment_analysis.predict_unlabeled_data(method='naive_bayes')
+def main():
+    parser = argparse.ArgumentParser(description='Sentiment Analysis Script')
+    parser.add_argument('--method', choices=['naive_bayes', 'textblob'], default='naive_bayes',
+                        help='Method for sentiment analysis (naive_bayes or textblob)')
+    
+    args = parser.parse_args()
 
-sentiment_analysis.train_classifier(method='textblob')
-# sentiment_analysis.evaluate(method='textblob')
-sentiment_analysis.predict_unlabeled_data(method='textblob')
+    sentiment_analysis = SentimentAnalysis()
+
+    # Train the classifier
+    sentiment_analysis.train_classifier(method=args.method)
+
+    # Evaluate the classifier
+    sentiment_analysis.evaluate(method=args.method)
+
+    # Predict unlabeled data
+    sentiment_analysis.predict_unlabeled_data(method=args.method)
+
+if __name__ == "__main__":
+    main()

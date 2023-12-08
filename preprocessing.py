@@ -1,5 +1,7 @@
-import json
 import re
+import json
+import argparse
+
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
@@ -57,9 +59,16 @@ class Preprocessor:
 
         print(f"Preprocessed data written to {self.output_file}")
 
-# Example usage
-input_file = 'twitter_comments.json'
-output_file = 'preprocessed_tweets.json'
 
-preprocessor = Preprocessor(input_file, output_file)
-preprocessor.preprocess()
+def main():
+    parser = argparse.ArgumentParser(description='Text Preprocessing Script')
+    parser.add_argument('input_file', help='Input JSON file name')
+    parser.add_argument('output_file', help='Output JSON file name')
+    
+    args = parser.parse_args()
+
+    preprocessor = Preprocessor(input_file=args.input_file, output_file=args.output_file)
+    preprocessor.preprocess()
+
+if __name__ == "__main__":
+    main()
