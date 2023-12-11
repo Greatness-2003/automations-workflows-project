@@ -1,8 +1,8 @@
 # Modern Family (TV Show) Sentiment Analysis 
 
-Project Description: In this project, I will develop a sentiment analysis tool to analyze Twitter data related to the popular TV show, Modern Family. The goal is to collect, process, and analyze tweets, comments, and posts from Twitter to determine the sentiment (positive, negative, or neutral) of the audience's reactions to the show. This project aims to provide valuable insights into how people perceive and engage with TV shows on social media platforms.
+Project Description: In this project, I developed a sentiment analysis tool to analyze Twitter data related to the popular TV show, Modern Family. The goal is to collect, process, and analyze tweets and comments from Twitter to determine the sentiment (positive, negative, or neutral) of the audience's reactions to the show. This project aims to provide valuable insights into how people perceive and engage with TV shows on social media platforms.
 
-***NB: For this project, I am only focusing on 1 TV show, but the process can be extended to others in the future.***
+***NB: For this project, I am only focusing on 1 TV show, but the program can be applied to others.***
 
 Below are the various steps in the project. More may be added as it progresses.
 ## Project Components:
@@ -17,12 +17,14 @@ Below are the various steps in the project. More may be added as it progresses.
 
 ***NB: Tweets and comments can be collected using the Twitter Developer API, or by using Twitter scraping code. I used [pre-existing code](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/week-3/twitter-scraper/scrape_twitter.py) developed by Professor Alexander Nwala, Data Science professor at William and Mary.***
 
-### 2. Data Preprocessing (completed):
+
+### 2. Data Preprocessing:
 * I removed unnecessary data, including retweets and duplicates.
 * Cleaned the text data by handling special characters, and URLs.
 * Tokenized the text data to prepare it for sentiment analysis.
 * This [preprocessing python class](preprocessing.py) found in `preprocessing.py` does all the above. 
-* Running the class on `twiiter_comments` returns a [json file](data/preprocessed_tweets.json) of tokenized and preprocessed tweets.
+* Running the script on `twiiter_comments` returns a [json file](data/preprocessed_tweets.json) of tokenized and preprocessed tweets.
+The script 2 parameters: the path to the input and output files.
 * The user should run the class on their collected comments and save the output as `unlabeled_comments.json` in the `data` folder. This is necessary to run the sentiment analysis.
 
 Example terminal run:
@@ -30,7 +32,9 @@ Example terminal run:
 ```bash
 python preprocessing.py data/input_data.json data/output_data.json
 ```
-### 3. Sentiment Analysis (completed):
+
+
+### 3. Sentiment Analysis:
 
 * The class that performs sentiment analysis on `preprocessed_tweets.json` is called `SentimentAnalysis` and can be found [here](sentiment_analysis.py). 
 * This class takes 2 approaches: TextBlob (rule-based approach) and Naive Bayes (machine learning approach). The user can choose which of the approaches they want to use when running the script. The default method is `naive_bayes`, and will be implemented if the user does not give an argument.
@@ -39,7 +43,7 @@ python preprocessing.py data/input_data.json data/output_data.json
 python sentiment_analysis.py --method textblob
 ```
 
-* In order to train the naives bayes model, a random subset (600) of the comments were selected and manually labeled as positive, negative, or neutral. These labels are stored in another json [file](data/sentiment_labels.json) called `sentiment_labels`. 
+* In order to train the naives bayes model, a random subset (600) of the comments was selected and manually labeled as positive, negative, or neutral. These labels are stored in another json [file](data/sentiment_labels.json) called `sentiment_labels`. 
 * Evaluated the model's performance using metrics such as accuracy, precision, recall, and F1 score.
 * TextBlob and the trained naive bayes model are then run on the unlabeled comments to predict sentiments. 
 * If the user's preprocessed comments (`unlabeled_comments.json`) do not exist, then the program would run prediction on the remaining 700 comments that weren't labeled.
@@ -62,7 +66,7 @@ Negative Percentage: 7.834757834757834
 Yay, most people love this show!
 ```
 
-### 4. Data Visualization (completed):
+### 4. Data Visualization:
 
 * Wrote a Class that create several visualizations, called `SentimentVisualizer` located in this [file](analysis_plots.py). This class takes the `SentimentAnalysis` class as a parameter and uses some of its functions.
 * First function creates a bar chart to show the distribution of sentiments in the unlabeled dataset. This helps visualize the balance or imbalance between positive, neutral, and negative sentiments.

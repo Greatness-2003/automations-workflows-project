@@ -8,11 +8,39 @@ from sentiment_analysis import SentimentAnalysis
 
 
 class SentimentVisualizer:
+
+    """
+    A class for visualizing sentiment analysis results.
+
+    Attributes:
+    - sentiment_analysis (SentimentAnalysis): An instance of the SentimentAnalysis class.
+
+    Methods:
+    - sentiment_distribution_bar(method_stats, method): Create and display a bar chart representing the distribution of sentiments for a given method.
+    - sentiment_distribution_stackedbar(method_stats_list): Create and display a stacked bar chart comparing sentiment distribution across different methods.
+    - generate_word_cloud(method='naive_bayes'): Generate and display a word cloud for each sentiment category.
+    """
+
     def __init__(self, sentiment_analysis):
+
+        """
+        Initialize the SentimentVisualizer with an instance of SentimentAnalysis.
+
+        Parameters:
+        - sentiment_analysis (SentimentAnalysis): An instance of the SentimentAnalysis class.
+        """
+
         self.sentiment_analysis = sentiment_analysis
 
     def sentiment_distribution_bar(self, method_stats, method):
-        # create and display a bar chart representing the distribution of sentiments for a given method
+
+        """
+        Create and display a bar chart representing the distribution of sentiments for a given method.
+
+        Parameters:
+        - method_stats (dict): Statistics for the specified method.
+        - method (str): Method for sentiment analysis ('naive_bayes' or 'textblob').
+        """
 
         labels = ['Negative', 'Neutral', 'Positive']
         percentages = [method_stats['Negative Percentage'], method_stats['Neutral Percentage'], method_stats['Positive Percentage']]
@@ -29,7 +57,13 @@ class SentimentVisualizer:
         plt.show()
 
     def sentiment_distribution_stackedbar(self, method_stats_list):
-        # create and display a stacked bar chart comparing sentiment distribution across different methods
+
+        """
+        Create and display a stacked bar chart comparing sentiment distribution across different methods.
+
+        Parameters:
+        - method_stats_list (list): List of dictionaries containing statistics for each method.
+        """
 
         methods = [method['Method'] for method in method_stats_list]
         positive_percentages = [method['Positive Percentage'] for method in method_stats_list]
@@ -60,7 +94,13 @@ class SentimentVisualizer:
         plt.show()
 
     def generate_word_cloud(self, method='naive_bayes'):
-        # generate and display a word cloud for each sentiment category
+
+        """
+        Generate and display a word cloud for each sentiment category.
+
+        Parameters:
+        - method (str): Method for sentiment analysis ('naive_bayes' or 'textblob').
+        """
 
         sentiment_labels = ['Negative', 'Neutral', 'Positive']
 
@@ -88,6 +128,11 @@ class SentimentVisualizer:
                 print(f"No comments for {sentiment} sentiment.")
 
 def main():
+
+    """
+    Main function for executing sentiment visualization.
+    """
+    
     parser = argparse.ArgumentParser(description='Sentiment Visualizer Script')
     parser.add_argument('--method', choices=['naive_bayes', 'textblob'], default='naive_bayes',
                         help='Method for sentiment analysis (naive_bayes or textblob)')

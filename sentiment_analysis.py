@@ -12,15 +12,61 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 
 class SentimentAnalysis:
+
+    """
+    A class for sentiment analysis using Naive Bayes or TextBlob.
+
+    Attributes:
+    - tweets_file (str): Path to the preprocessed tweets JSON file.
+    - labels_file (str): Path to the sentiment labels JSON file.
+    - seed (int): Random seed for reproducibility.
+    - tfidf_vectorizer (TfidfVectorizer): TF-IDF vectorizer for feature extraction.
+    - preprocessed_tweets (list): List of preprocessed tweets.
+    - sampled_tweets (list): Randomly sampled tweets for labeling.
+    - unlabeled_tweets (list): List of unlabeled tweets for later use.
+    - labels (list): Numerical labels corresponding to sentiment.
+    - X_train, X_test, y_train, y_test (pd.Series): Split labeled data for training and testing.
+    - clf (MultinomialNB): Naive Bayes classifier.
+
+    Methods:
+    - load_data(tweets_file, labels_file): Load preprocessed tweets, labels, and create datasets.
+    - train_classifier(method='naive_bayes'): Train the sentiment classifier.
+    - train_naive_bayes(): Train the Naive Bayes classifier using TF-IDF features.
+    - analyze_sentiment_naive_bayes(comment): Predict sentiment using the trained Naive Bayes classifier.
+    - analyze_sentiment_textblob(comment): Analyze sentiment using TextBlob.
+    - evaluate(method='naive_bayes'): Evaluate the performance of the sentiment analysis method.
+    - evaluate_naive_bayes(): Evaluate the performance of the Naive Bayes classifier.
+    - evaluate_textblob(): Evaluate the performance of TextBlob for sentiment analysis.
+    - predict_unlabeled_data(method='naive_bayes'): Predict sentiment for unlabeled data.
+    """
+     
+
     def __init__(self, tweets_file='data/preprocessed_tweets.json', labels_file='data/sentiment_labels.json', seed=42):
-        # initialize with a seed for reproducibility
+
+        """
+        Initialize the SentimentAnalysis object.
+
+        Parameters:
+        - tweets_file (str): Path to the preprocessed tweets JSON file.
+        - labels_file (str): Path to the sentiment labels JSON file.
+        - seed (int): Random seed for reproducibility.
+        """
+
         random.seed(seed)
         # load data and create a TF-IDF vectorizer
         self.load_data(tweets_file, labels_file)
         self.tfidf_vectorizer = TfidfVectorizer()
 
     def load_data(self, tweets_file, labels_file):
-        # load preprocessed tweets and labels
+
+        """
+        Load preprocessed tweets, labels, and create datasets for training and testing.
+
+        Parameters:
+        - tweets_file (str): Path to the preprocessed tweets JSON file.
+        - labels_file (str): Path to the sentiment labels JSON file.
+        """
+
         with open(tweets_file, 'r', encoding='utf-8') as file:
             self.preprocessed_tweets = json.load(file)
 
@@ -38,7 +84,7 @@ class SentimentAnalysis:
                 else:
                     self.unlabeled_tweets.append(tweet)
         else:
-            with open('unlabeled_comments.json', 'r') as file:
+            with open('data/unlabeled_comments.json', 'r') as file:
                 self.unlabeled_tweets = json.load(file)
 
         with open(labels_file, 'r', encoding='utf-8') as file:
@@ -55,25 +101,55 @@ class SentimentAnalysis:
         )
 
     def train_classifier(self, method='naive_bayes'):
+
+        """
+        Train the sentiment classifier.
+
+        Parameters:
+        - method (str): Method for sentiment analysis ('naive_bayes' or 'textblob').
+        """
+
         if method == 'naive_bayes':
             self.train_naive_bayes()
         elif method == 'textblob':
             pass  # No training needed for TextBlob
 
     def train_naive_bayes(self):
-        # use TF-IDF vectorizer to convert text data into numerical features
-        X_train_tfidf = self.tfidf_vectorizer.fit_transform(self.X_train)
 
-        # train and fit the Naive Bayes classifier
+        """
+        Train the Naive Bayes classifier using TF-IDF features.
+        """
+
+        X_train_tfidf = self.tfidf_vectorizer.fit_transform(self.X_train)
         self.clf = MultinomialNB()
         self.clf.fit(X_train_tfidf, self.y_train)
 
     def analyze_sentiment_naive_bayes(self, comment):
-        # use the trained Naive Bayes classifier to predict sentiment for specific comment
+
+        """
+        Predict sentiment using the trained Naive Bayes classifier.
+
+        Parameters:
+        - comment (str): Textual content for sentiment analysis.
+
+        Returns:
+        - int: Predicted sentiment label.
+        """
+
         return self.clf.predict(self.tfidf_vectorizer.transform([comment]))[0]
     
     def analyze_sentiment_textblob(self, comment):
-        # analyze sentiment using TextBlob
+
+        """
+        Analyze sentiment using TextBlob.
+
+        Parameters:
+        - comment (str): Textual content for sentiment analysis.
+
+        Returns:
+        - int: Predicted sentiment label.
+        """
+
         analysis = TextBlob(comment)
         polarity = analysis.sentiment.polarity
         if polarity > 0:
@@ -84,13 +160,25 @@ class SentimentAnalysis:
             return 1  # neutral
 
     def evaluate(self, method='naive_bayes'):
-        # evaluate the performance of the specified method
+
+        """
+        Evaluate the performance of the sentiment analysis method.
+
+        Parameters:
+        - method (str): Method for sentiment analysis ('naive_bayes' or 'textblob').
+        """
+
         if method == 'naive_bayes':
             self.evaluate_naive_bayes()
         elif method == 'textblob':
             self.evaluate_textblob()
 
     def evaluate_naive_bayes(self):
+
+        """
+        Evaluate the performance of the Naive Bayes classifier.
+        """
+
         # use the trained Naive Bayes classifier to make predictions
         X_test_tfidf = self.tfidf_vectorizer.transform(self.X_test)
         y_pred = self.clf.predict(X_test_tfidf)
@@ -105,6 +193,11 @@ class SentimentAnalysis:
         print(f"Naive Bayes - Accuracy: {accuracy}, Precision: {precision}, Recall: {recall}, F1 Score: {f1}")
 
     def evaluate_textblob(self):
+
+        """
+        Evaluate the performance of TextBlob for sentiment analysis.
+        """
+
         sentiment_results = [self.analyze_sentiment_textblob(comment) for comment in self.sampled_tweets]
 
         # evaluate performance metrics
@@ -117,12 +210,20 @@ class SentimentAnalysis:
         print(f"TextBlob - Accuracy: {accuracy}, Precision: {precision}, Recall: {recall}, F1 Score: {f1}")
 
     def predict_unlabeled_data(self, method='naive_bayes'):
-        # use Naive Bayes on unlabeled data
+
+        """
+        Predict sentiment for unlabeled data.
+
+        Parameters:
+        - method (str): Method for sentiment analysis ('naive_bayes' or 'textblob').
+
+        Returns:
+        - dict: Statistics for the specified method.
+        """
+
         if method == 'naive_bayes':
             X_unlabeled_tfidf = self.tfidf_vectorizer.transform(self.unlabeled_tweets)
             predictions = list(self.clf.predict(X_unlabeled_tfidf))
-
-        # use TextBlob on unlabeled data
         elif method == 'textblob':
             predictions = [self.analyze_sentiment_textblob(tweet) for tweet in self.unlabeled_tweets]
         else:
@@ -166,6 +267,11 @@ class SentimentAnalysis:
 
 
 def main():
+
+    """
+    Main function for executing sentiment analysis.
+    """
+    
     parser = argparse.ArgumentParser(description='Sentiment Analysis Script')
     parser.add_argument('--method', choices=['naive_bayes', 'textblob'], default='naive_bayes',
                         help='Method for sentiment analysis (naive_bayes or textblob)')
